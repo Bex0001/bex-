@@ -3,11 +3,7 @@
   "builds": [
     {
       "src": "app.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "15mb",
-        "pythonRuntime": "python3.9"
-      }
+      "use": "@vercel/python"
     },
     {
       "src": "static/*",
@@ -19,7 +15,5 @@
       "src": "/(.*)",
       "dest": "/app.py"
     }
-  ],
-  "buildCommand": "./build.sh",
-  "outputDirectory": "public"
+  ]
 }
